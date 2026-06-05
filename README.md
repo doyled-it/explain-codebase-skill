@@ -25,7 +25,7 @@ Clone and symlink the skill directory into your skills folder:
 
 ```bash
 git clone https://github.com/doyled-it/explain-codebase-skill.git
-ln -s "$PWD/explain-codebase-skill/skills/explain-codebase" ~/.claude/skills/explain-codebase
+ln -s "$PWD/explain-codebase-skill/plugins/explain-codebase/skills/explain-codebase" ~/.claude/skills/explain-codebase
 ```
 
 ## Optional: codegraph
@@ -37,20 +37,23 @@ curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install
 cd your-project && codegraph init && codegraph index
 ```
 
-See [`skills/explain-codebase/references/codegraph.md`](skills/explain-codebase/references/codegraph.md) for the full command reference and MCP-server setup.
+See [`plugins/explain-codebase/skills/explain-codebase/references/codegraph.md`](plugins/explain-codebase/skills/explain-codebase/references/codegraph.md) for the full command reference and MCP-server setup.
 
 ## Layout
 
 ```
 .claude-plugin/
-  plugin.json          # plugin manifest
-  marketplace.json     # single-plugin marketplace, source "./"
-skills/explain-codebase/
-  SKILL.md             # behavior, exploration strategy, gotchas
-  references/
-    diagram-toolkit.md # ASCII pattern gallery + worked examples
-    codegraph.md       # install, commands, MCP setup
+  marketplace.json                 # marketplace, plugin source "./plugins/explain-codebase"
+plugins/explain-codebase/
+  .claude-plugin/plugin.json       # plugin manifest
+  skills/explain-codebase/
+    SKILL.md                       # behavior, exploration strategy, gotchas
+    references/
+      diagram-toolkit.md           # ASCII pattern gallery + worked examples
+      codegraph.md                 # install, commands, MCP setup
 ```
+
+Works in both Claude Code and Codex (`codex plugin marketplace add doyled-it/explain-codebase-skill` → `codex plugin add explain-codebase@doyled-it-skills`).
 
 ## License
 

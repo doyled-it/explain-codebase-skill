@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "explain-codebase",
-      "source": "./",
+      "source": "./plugins/explain-codebase",
       "description": "Explain how a codebase works through ASCII diagrams and prose, accelerated by codegraph's pre-indexed code graph when available."
     }
   ]
