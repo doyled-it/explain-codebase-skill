@@ -1,0 +1,11 @@
+{
+  "name": "explain-codebase",
+  "version": "0.1.0",
+  "description": "Explain how a codebase works through ASCII diagrams and prose, accelerated by codegraph's pre-indexed code graph when available.",
+  "author": {
+    "name": "Michael Doyle",
+    "url": "https://github.com/doyled-it"
+  },
+  "homepage": "https://github.com/doyled-it/explain-codebase-skill",
+  "keywords": ["codebase", "onboarding", "architecture", "diagrams", "codegraph"]
+}

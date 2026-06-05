@@ -1,0 +1,14 @@
+{
+  "name": "doyled-it-skills",
+  "owner": {
+    "name": "Michael Doyle",
+    "url": "https://github.com/doyled-it"
+  },
+  "plugins": [
+    {
+      "name": "explain-codebase",
+      "source": "./",
+      "description": "Explain how a codebase works through ASCII diagrams and prose, accelerated by codegraph's pre-indexed code graph when available."
+    }
+  ]
+}
