@@ -1,13 +1,13 @@
 # explain-codebase-skill
 
-A Claude Code skill that explains how a codebase works through **ASCII diagrams and clear prose** — and uses [codegraph](https://github.com/colbymchenry/codegraph) for fast structural exploration when it's available.
+A Claude Code skill that explains how a codebase works through **ASCII diagrams and clear prose**, and uses [codegraph](https://github.com/colbymchenry/codegraph) for fast structural exploration when it's available.
 
 Ask "how does authentication work?", "walk me through the request flow", or "give me an overview", and Claude answers with a monospace diagram (flow, tree, sequence, layers, state machine) plus cited `file:line` references and concrete follow-up questions.
 
 ## What it does
 
 - **Diagram-first explanations.** Anything with structure, flow, or state gets an ASCII diagram, not just paragraphs.
-- **codegraph-accelerated exploration (optional).** When `codegraph` is installed and the project is indexed, the skill queries the pre-built code graph (`query`, `callers`, `callees`, `impact`) instead of repeatedly grepping and reading — typically cutting exploration tokens and tool calls by roughly half. If codegraph isn't present, it falls back to the usual Glob/Grep/Read.
+- **codegraph-accelerated exploration (optional).** When `codegraph` is installed and the project is indexed, the skill queries the pre-built code graph (`query`, `callers`, `callees`, `impact`) instead of repeatedly grepping and reading, typically cutting exploration tokens and tool calls by roughly half. If codegraph isn't present, it falls back to the usual Glob/Grep/Read.
 - **Honest about staleness.** Graph output and doc claims are treated as leads to verify against the current source, never as ground truth.
 
 ## Install
@@ -57,4 +57,4 @@ Works in both Claude Code and Codex (`codex plugin marketplace add doyled-it/exp
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE).
